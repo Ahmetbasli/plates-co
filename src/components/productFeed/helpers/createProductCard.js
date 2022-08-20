@@ -5,14 +5,14 @@ import {
 } from "../../../utils/initShoppingCart";
 
 const createProductCard = (product) => {
-  const li = document.createElement("li");
-  li.classList.add("productCard");
-  li.innerHTML = `
+  const div = document.createElement("div");
+  div.classList.add("productCard");
+  div.innerHTML = `
     <h1>${product.name}</h1>
     <p>$${product.price}</p>
     <button id="${product.code}">Add to cart</button>`;
 
-  li.querySelector("button").addEventListener("click", () => {
+  div.querySelector("button").addEventListener("click", () => {
     shoppingCart.add(product);
 
     const addToCartSnackBar = document.querySelector(".addToCartSnackBar");
@@ -20,11 +20,11 @@ const createProductCard = (product) => {
     addToCartSnackBar.style.display = "block";
     setTimeout(() => {
       addToCartSnackBar.style.display = "none";
-    }, 2000);
+    }, 3000);
     document.dispatchEvent(refreshShoppingCartInDom);
     document.dispatchEvent(refreshCartBadge);
   });
-  return li;
+  return div;
 };
 
 export default createProductCard;
