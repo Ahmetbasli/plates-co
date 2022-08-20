@@ -1,0 +1,138 @@
+.cart {
+  display: none;
+  padding: 40px;
+}
+.cart__sidebar {
+  padding: 20px 0;
+  min-width: 240px;
+  border-radius: 4px;
+  border: solid 1px #e5e5e5;
+  width: 20vw;
+  height: fit-content;
+
+  .cart__lastPrice {
+    font-size: 35px;
+    padding-inline: 12px;
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .cart__checkoutBtnWrapper {
+    padding-inline: 12px;
+  }
+  button {
+    margin: 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    width: 100%;
+    border: none;
+    background-color: rgb(255, 96, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+  }
+  .cart__deliveryInfo {
+    background: lightgray;
+    padding: 12px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+  .cart__delivery {
+    font-size: 16px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .rawDeliveryCost {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 12px;
+      margin-left: 2px;
+    }
+  }
+  .cart__price {
+    font-size: 16px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cart__campaign {
+    border-top: 1px solid lightgray;
+    padding: 12px 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__info {
+      font-size: 16px;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        color: green;
+      }
+    }
+  }
+}
+
+.cart__products {
+  margin-right: 20px;
+  flex: 1;
+
+  &__card {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: solid 1px #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    .left {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        font-size: 20px;
+      }
+      div {
+        margin-bottom: 12px;
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      button {
+        width: 36px;
+        height: 36px;
+        margin: 12px;
+        border-radius: 4px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0 3px 5px rgb(57 63 72 / 30%);
+        }
+        &:active {
+          transform: scale(1.05);
+        }
+      }
+      .increaseBtn {
+        background: url(../../../assets/plus.svg);
+      }
+      .count {
+        text-align: center;
+      }
+      .decreaseBtn {
+        display: none;
+        background: url(../../../assets/decrease.svg);
+      }
+      .removeBtn {
+        background: url(../../../assets/remove.svg);
+      }
+    }
+  }
+}
