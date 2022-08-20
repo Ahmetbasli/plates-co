@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Red Plate",
+    "code": "R01",
+    "price": 32.95
+  },
+  {
+    "id": 2,
+    "name": "Green Plate",
+    "code": "G01",
+    "price": 24.95
+  },
+  {
+    "id": 3,
+    "name": "Blue Plate",
+    "code": "B01",
+    "price": 7.95
+  }
+]
