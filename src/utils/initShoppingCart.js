@@ -1,4 +1,4 @@
-import ShoppingCart from "../../models/shopping/shoppingCart";
+import ShoppingCart from "../models/shopping/shoppingCart";
 export let shoppingCart;
 export let refreshShoppingCartInDom;
 export let refreshCartBadge;
