@@ -7,10 +7,15 @@ const strategyWithRedPlateCampaign = (price) => {
       key: "RedPlateCampaign",
       campaign: {
         text: "Buy one red plate, get the second half price.",
-        priceToDiscount:
-          shoppingCart.getProductsAsMap().get("R01").getPrice() / 2,
+        priceToDiscount: Number(
+          shoppingCart.getProductsAsMap().get("R01").getPrice() / 2
+        ).toFixed(2),
       },
     });
+    console.log(
+      shoppingCart.getProductsAsMap().get("R01").getPrice(),
+      shoppingCart.getProductsAsMap().get("R01").getPrice() / 2
+    );
     return addDeliverCost(
       price -
         shoppingCart.apliedCampaignsMap.get("RedPlateCampaign").priceToDiscount

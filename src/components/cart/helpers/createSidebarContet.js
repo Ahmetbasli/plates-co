@@ -19,7 +19,7 @@ const createSideBarContent = () => {
       div.classList.add("cart__campaign__info");
       div.innerHTML = `
       <p>${campaign.text}</p>
-      <span>-${campaign.priceToDiscount.toFixed(2)}$</span>
+      <span>-${campaign.priceToDiscount}$</span>
     `;
       campaignsHTMLArr.push(div.outerHTML);
     }
