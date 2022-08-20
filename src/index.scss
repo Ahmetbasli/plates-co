@@ -14,3 +14,21 @@
     background: url(./assets/emptyBasket.svg);
   }
 }
+
+@keyframes slide {
+  100% {
+    right: 10px;
+  }
+}
+.addToCartSnackBar {
+  color: whitesmoke;
+  position: absolute;
+  top: 100px;
+  right: -300px;
+  background-color: rgb(49, 212, 49);
+  border-radius: 4px;
+  width: 200px;
+  padding: 20px;
+  animation: slide 0.5s forwards;
+  display: none;
+}

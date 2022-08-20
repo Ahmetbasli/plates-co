@@ -14,6 +14,13 @@ const createProductCard = (product) => {
 
   li.querySelector("button").addEventListener("click", () => {
     shoppingCart.add(product);
+
+    const addToCartSnackBar = document.querySelector(".addToCartSnackBar");
+    console.log(addToCartSnackBar);
+    addToCartSnackBar.style.display = "block";
+    setTimeout(() => {
+      addToCartSnackBar.style.display = "none";
+    }, 2000);
     document.dispatchEvent(refreshShoppingCartInDom);
     document.dispatchEvent(refreshCartBadge);
   });
