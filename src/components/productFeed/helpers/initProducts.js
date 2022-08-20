@@ -1,4 +1,4 @@
-import Product from "../../../../models/shopping/product";
+import Product from "../../../models/shopping/product";
 import products from "../../../data/products.json";
 const initProducts = () => {
   return products.map(
