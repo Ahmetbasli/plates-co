@@ -6,7 +6,6 @@ import showCartEmptyPageIfCartEmpty from "./helpers/showCartEmptyPageIfCartEmpty
 
 export default class Cart {
   apply() {
-    const cartPage = document.querySelector(".cart");
     const cartProductsDiv = document.querySelector(".cart__products");
     const sidebarDiv = document.querySelector(".cart__sidebar");
     // showCartEmptyPageIfCartEmpty();
