@@ -11,7 +11,6 @@ export default class ShoppingCart extends Composite {
   }
 
   applyNewCampaign({ key, campaign }) {
-    console.log("ahmettt");
     this.apliedCampaignsMap.set(key, campaign);
   }
 
@@ -40,12 +39,5 @@ export default class ShoppingCart extends Composite {
     });
 
     return itemsMap;
-  }
-  getQuantity() {
-    let totalQuantity = 0;
-    for (const item of this.itemsMap.values()) {
-      totalQuantity = totalQuantity + item.getQuantity();
-    }
-    return totalQuantity;
   }
 }
