@@ -26,7 +26,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      inject: false,
       template: `./index.html`,
       filename: `index.html`,
       chunks: ["index"],
