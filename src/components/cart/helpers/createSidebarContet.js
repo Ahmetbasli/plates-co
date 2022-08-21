@@ -3,28 +3,7 @@ import strategyWithRedPlateCampaign from "./strategyWithRedPlateCampaign";
 
 const createSideBarContent = () => {
   const sidebarContent = document.createElement("div");
-  const renderDeliveryCostHTML = () => {
-    if (shoppingCart.deliveryCost === 4.95) {
-      return `<div>${shoppingCart.deliveryCost}$</div>`;
-    }
-    return `<div>${
-      shoppingCart.deliveryCost
-    }$<span class="rawDeliveryCost">${4.95}$ </span> </div>`;
-  };
 
-  const renderCampaignsHTML = () => {
-    const campaignsHTMLArr = [];
-    for (const campaign of shoppingCart.apliedCampaignsMap.values()) {
-      const div = document.createElement("div");
-      div.classList.add("cart__campaign__info");
-      div.innerHTML = `
-      <p>${campaign.text}</p>
-      <span>-${campaign.priceToDiscount}$</span>
-    `;
-      campaignsHTMLArr.push(div.outerHTML);
-    }
-    return campaignsHTMLArr.join("");
-  };
   sidebarContent.innerHTML = `
   <div class="cart__lastPrice">${shoppingCart
     .checkout(strategyWithRedPlateCampaign)
@@ -51,6 +30,29 @@ const createSideBarContent = () => {
   `;
 
   return sidebarContent;
+};
+
+const renderDeliveryCostHTML = () => {
+  if (shoppingCart.deliveryCost === 4.95) {
+    return `<div>${shoppingCart.deliveryCost}$</div>`;
+  }
+  return `<div>${
+    shoppingCart.deliveryCost
+  }$<span class="rawDeliveryCost">${4.95}$ </span> </div>`;
+};
+
+const renderCampaignsHTML = () => {
+  const campaignsHTMLArr = [];
+  for (const campaign of shoppingCart.apliedCampaignsMap.values()) {
+    const div = document.createElement("div");
+    div.classList.add("cart__campaign__info");
+    div.innerHTML = `
+    <p>${campaign.text}</p>
+    <span>-${campaign.priceToDiscount}$</span>
+  `;
+    campaignsHTMLArr.push(div.outerHTML);
+  }
+  return campaignsHTMLArr.join("");
 };
 
 export default createSideBarContent;
