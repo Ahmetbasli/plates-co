@@ -1,8 +1,8 @@
 import {
   refreshCartBadge,
   refreshShoppingCartInDom,
-  shoppingCart,
-} from "../../../utils/initShoppingCart";
+} from "../../../utils/initCustomEvents";
+import { shoppingCart } from "../../../utils/initShoppingCart";
 import findProductIndexInReverseOrder from "../uitls/findProductIndexInReverseOrder";
 
 const createProductCard = (product) => {
