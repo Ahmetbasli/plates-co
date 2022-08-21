@@ -1,6 +1,12 @@
 .cart {
   display: none;
   padding: 40px;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    .cart__sidebar {
+      margin: auto;
+    }
+  }
 }
 .cart__sidebar {
   padding: 20px 0;
