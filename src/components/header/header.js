@@ -10,11 +10,14 @@ export default class Header {
     const productFeed = document.querySelector(".productFeed");
     const cart = document.querySelector(".cart");
     const cartEmptyPage = document.querySelector(".cartEmptyPage");
+    const campaign = document.querySelector(".campaign");
+
     basket.addEventListener("click", () => {
       basket.style.visibility = "hidden";
       backToShopping.style.visibility = "visible";
       productFeed.style.display = "none";
       cart.style.display = "flex";
+      campaign.style.visibility = "hidden";
       showCartEmptyPageIfCartEmpty();
     });
 
@@ -24,6 +27,7 @@ export default class Header {
       productFeed.style.display = "flex";
       cart.style.display = "none";
       cartEmptyPage.style.display = "none";
+      campaign.style.visibility = "visible";
     });
 
     document.addEventListener("refreshCartBadge", (e) => {
