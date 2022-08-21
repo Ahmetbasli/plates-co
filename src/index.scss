@@ -14,7 +14,15 @@
     background: url(./assets/emptyBasket.svg);
   }
 }
-
+.campaign {
+  background: rgb(196, 252, 196);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 8px 0;
+}
 @keyframes slide {
   100% {
     right: 10px;
