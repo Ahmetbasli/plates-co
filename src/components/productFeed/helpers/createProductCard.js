@@ -16,7 +16,6 @@ const createProductCard = (product) => {
     shoppingCart.add(product);
 
     const addToCartSnackBar = document.querySelector(".addToCartSnackBar");
-    console.log(addToCartSnackBar);
     addToCartSnackBar.style.display = "block";
     setTimeout(() => {
       addToCartSnackBar.style.display = "none";
