@@ -3,8 +3,12 @@
   padding: 40px;
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    padding: 18px;
     .cart__sidebar {
       margin: auto;
+    }
+    .cart__products {
+      margin-right: 0;
     }
   }
 }
@@ -108,7 +112,7 @@
       .campaign__text {
         margin-top: 10px;
         color: green;
-        height: 10px;
+        min-height: 10px;
       }
       div {
         margin-bottom: 12px;
