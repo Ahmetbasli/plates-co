@@ -1,8 +1,8 @@
 import {
   refreshCartBadge,
   refreshShoppingCartInDom,
-  shoppingCart,
-} from "../../../utils/initShoppingCart";
+} from "../../../utils/initCustomEvents";
+import { shoppingCart } from "../../../utils/initShoppingCart";
 
 const createProductCard = (product) => {
   const div = document.createElement("div");
