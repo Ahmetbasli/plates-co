@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: space-between;
   &__basket {
-    height: 36px;
-    width: 36px;
+    height: 28px;
+    width: 28px;
     float: right;
     background: url(../../assets/basket.svg);
     background-repeat: no-repeat, repeat;
@@ -31,8 +31,8 @@
   }
   &__backToShopping {
     visibility: hidden;
-    height: 36px;
-    width: 36px;
+    height: 28px;
+    width: 28px;
     cursor: pointer;
     background: url(../../assets/left-arrow.svg);
     background-repeat: no-repeat, repeat;
