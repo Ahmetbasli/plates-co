@@ -12,10 +12,7 @@ const strategyWithRedPlateCampaign = (price) => {
         ).toFixed(2),
       },
     });
-    console.log(
-      shoppingCart.getProductsAsMap().get("R01").getPrice(),
-      shoppingCart.getProductsAsMap().get("R01").getPrice() / 2
-    );
+
     return addDeliverCost(
       price -
         shoppingCart.apliedCampaignsMap.get("RedPlateCampaign").priceToDiscount
